@@ -18,9 +18,8 @@ echo "jobid=${FX_JOBID}"
 runId=$(curl -k --header "Content-Type: application/json;charset=UTF-8" -X POST -d '{}' -u "${FX_USER}":"${FX_PWD}" https://cloud.fxlabs.io/api/v1/runs/job/${FX_JOBID}?region=${REGION} | jq -r '.["data"]|.id')
 
 echo "runId =" $runId
-#//if [ -z "$runId" ]
 if [ -z "$runId" ]
-## -o "$runId" != "" ]
+
 then
 	  echo "RunId = " "$runId"
           echo "Invalid runid"
