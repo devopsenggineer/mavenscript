@@ -19,7 +19,6 @@ runId=$(curl -k --header "Content-Type: application/json;charset=UTF-8" -X POST 
 
 echo "runId =" $runId
 if [ -z "$runId" ]
-
 then
 	  echo "RunId = " "$runId"
           echo "Invalid runid"
